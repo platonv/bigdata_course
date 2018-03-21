@@ -4,7 +4,7 @@
 # What do you observe, where is “output.txt” created? Display the contents of “output.txt”.
 
 hadoop fs -mkdir src
-echo "file1.txt" | hadoop fs -put - src/file1.txt
-echo "file2.txt" | hadoop fs -put - src/file2.txt
+echo "file1" | hadoop fs -put - src/file1.txt
+echo "file2" | hadoop fs -put - src/file2.txt
 hadoop fs -getmerge -nl src/file1.txt src/file2.txt output.txt
 cat output.txt
